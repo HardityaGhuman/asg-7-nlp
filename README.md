@@ -24,7 +24,8 @@ Haar is the classical baseline. YuNet is the main detector.
 
 **Evaluation terms.** *Recall* is the fraction of real faces that were found.
 A *false positive* is a box drawn on something that is not a face. Every image and
-frame here contains exactly one face, and all saved detections were checked visually.
+frame here contains exactly one face. Every detection in the saved images was checked
+visually; video was checked on sampled frames.
 All captures use the same plain background, lighting and neutral expression, so
 pose and mask are the only things that change.
 
@@ -85,7 +86,7 @@ OpenCV test image with a mask drawn over the lower face.
 
 | Image | Haar | YuNet (confidence) |
 |---|---|---|
-| Synthetic control | Missed | Found |
+| Synthetic control | Missed | Found (0.82) |
 | Straight, normal distance | Missed | Found (0.83) |
 | Head turned | Missed | Missed (0.62, below 0.7) |
 | Head turned (other side) | Missed | Found (0.74) |
